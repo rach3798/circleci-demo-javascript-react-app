@@ -62,3 +62,6 @@ workflows:
       #     filters:
       #       branches:
       #         only: master # only deploy when on main/master
+test:
+  post:
+    - curl -sSL https://download.sourceclear.com/ci.sh | sh
