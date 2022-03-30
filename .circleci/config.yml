@@ -65,3 +65,8 @@ workflows:
 test:
   post:
     - curl -sSL https://download.sourceclear.com/ci.sh | sh
+  steps:
+    -run: srcclr activate ${SRCCLR_API_TOKEN}
+    steps:
+      -run: srcclr scan
+  
